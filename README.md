@@ -11,43 +11,7 @@ React Router (v6)
 Axios
 Fake Store API
 
-3. Folder Structure
-Antigravity/
-├── public/                    # Static assets
-├── src/
-│   ├── components/            # Reusable UI components
-│   │   ├── CategoryFilter.jsx # Category pill buttons
-│   │   ├── ErrorMessage.jsx   # Error state with retry
-│   │   ├── Loader.jsx         # Skeleton loading cards
-│   │   ├── Navbar.jsx         # Sticky header, mobile hamburger
-│   │   ├── Pagination.jsx     # Page navigation controls
-│   │   ├── ProductCard.jsx    # Product grid card
-│   │   ├── ProtectedRoute.jsx # Auth guard wrapper
-│   │   ├── SearchBar.jsx      # Search input
-│   │   └── Toast.jsx          # Toast notification popup
-│   ├── context/               # Global state providers
-│   │   ├── AuthContext.jsx    # Login/logout + localStorage persistence
-│   │   └── CartContext.jsx    # Cart CRUD + localStorage + toast alerts
-│   ├── hooks/                 # Custom React hooks
-│   │   └── useDebounce.js     # Debounce search input (300ms)
-│   ├── pages/                 # Route-level page components
-│   │   ├── Cart.jsx           # Cart listing + order summary
-│   │   ├── Home.jsx           # Product grid + search/filter/pagination
-│   │   ├── Layout.jsx         # Navbar + Outlet + Toast wrapper
-│   │   ├── Login.jsx          # Username/password login form
-│   │   └── ProductDetails.jsx # Single product view
-│   ├── services/              # API layer
-│   │   └── api.js             # Axios instance + endpoint functions
-│   ├── utils/                 # Pure utility functions
-│   │   └── formatPrice.js     # USD currency formatter (Intl.NumberFormat)
-│   ├── App.jsx                # Route definitions + provider nesting
-│   ├── main.jsx               # ReactDOM entry point
-│   └── index.css              # Tailwind directives + custom component classes
-├── tailwind.config.js         # Custom colors, fonts, animations
-├── vite.config.js
-├── package.json
-└── postcss.config.js
-4.Setup Instructions
+3.Setup Instructions
 1. Clone the repository
 git clone https://github.com/suman753/shopverse-frontend.git
 cd shopverse-frontend
@@ -58,7 +22,7 @@ npm run dev
 4. Build for production
 npm run build
 
-5. Features Implemented
+4. Features Implemented
 5.1 Authentication
 Login page with username + password form (any credentials accepted)
 Password visibility toggle (eye icon)
@@ -101,7 +65,7 @@ Custom color palette: primary (indigo) + surface (slate) scales
 Inter font via Google Fonts
 Responsive grid: 1 → 2 → 3 → 4 columns across breakpoints
 
-6. Key Decisions & Assumptions
+5. Key Decisions & Assumptions
 Decisions
 Decision	Rationale
 Client-side filtering instead of per-request API filtering	FakeStore API returns ~20 products total — fetching all once and filtering with useMemo is simpler and faster than multiple network round-trips
